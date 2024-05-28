@@ -191,7 +191,7 @@ const ProsesRekomendasi = ({
         r.jenisRambut.includes(kodeJenisRambut) &&
         r.gayaPribadi.includes(kodeGayaKepribadian)
       ) {
-        rekomendasiArray.push(r.nama);
+        rekomendasiArray.push(r.id);
       }
     }
     return rekomendasiArray.length > 0
