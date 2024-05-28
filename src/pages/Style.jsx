@@ -1,9 +1,16 @@
-
+import ProsesRekomendasi from "../controllers/ProsesRekomendasi"
 
 const Style = () => {
   return (
-    <div>Style</div>
-  )
+    <div>
+      testing :
+      <ProsesRekomendasi
+        kodeBentukWajah="B002"
+        kodeJenisRambut="J001"
+        kodeGayaKepribadian="P002"
+      />
+    </div>
+  );
 }
 
 export default Style

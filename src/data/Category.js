@@ -4,7 +4,7 @@ const Category = [
     image:"./images/bentuk-kepala.png",
   },
   {
-    title:"Texture Rambut",
+    title:"Jenis Rambut",
     image:"./images/texture-rambut.png",
   },
   {
