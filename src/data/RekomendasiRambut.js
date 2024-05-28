@@ -29,7 +29,7 @@ const RekomendasiRambut = [
     bentukWajah: ["Oval", "Bulat", "Diamond"],
     jenisRambut: ["Lurus", "Bergelombang", "Afro"],
     gayaPribadi: ["Nyaman", "Percaya Diri", "Rapi"],
-    image: "./images/hasil/two-block.jpg",
+    image: "./images/hasil/buzz-cut.jpg",
   },
   {
     id: "GR05",
@@ -53,7 +53,7 @@ const RekomendasiRambut = [
     bentukWajah: ["Oval", "Persegi", "Persegi Panjang"],
     jenisRambut: ["Tebal", "Lurus", "Tipis"],
     gayaPribadi: ["Percaya Diri", "Rapi", "Nyaman"],
-    image: "./images/hasil/short-and-spiky.jpg",
+    image: "./images/hasil/short-spiky.jpg",
   },
   {
     id: "GR08",
