@@ -9,7 +9,7 @@ const Navbar = ({ page }) => {
         <div className="container mx-auto py-3 flex justify-between items-center">
           {/* Logo Section */}
           <div className="text-black text-2xl">
-            <Link>
+            <Link to={`${page == "home" ? "/" : "../"}`}>
               <img
                 src="./images/logo.png"
                 alt="Logo"
