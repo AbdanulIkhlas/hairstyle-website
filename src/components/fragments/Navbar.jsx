@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import ButtonCustom from "../elements/buttons/ButtonCustom";
 import PropTypes from "prop-types";
 
-const Navbar = ({page}) => {
+const Navbar = ({ page }) => {
   return (
-    <div className="w-full h-[80px] z-30 px-32 font-inter shadow-lg bg-primary">
+    <div className="w-full h-[80px] z-30 px-32 pb-1 font-inter shadow-lg bg-primary">
       <div className="w-full bg-opacity-75">
         <div className="container mx-auto py-3 flex justify-between items-center">
           {/* Logo Section */}
@@ -62,7 +62,7 @@ const Navbar = ({page}) => {
 };
 
 Navbar.propTypes = {
-  page: PropTypes.string
-}
+  page: PropTypes.string,
+};
 
 export default Navbar;
