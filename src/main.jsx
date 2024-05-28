@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from './pages/HomePage.jsx';
+import Style from './pages/Style.jsx';
+import GetStarted from './pages/GetStarted.jsx';
 
 
 const router = createBrowserRouter([
@@ -10,26 +12,14 @@ const router = createBrowserRouter([
     path: "/",
     element: <HomePage />,
   },
-  // {
-  //   path: "/BecomeAMentor",
-  //   element: <BecomeAMentor />,
-  // },
-  // {
-  //   path: "/profileMentor/:id",
-  //   element: <ProfileMentor />,
-  // },
-  // {
-  //   path: "/profileMentor/edit/:id",
-  //   element: <ProfileMentorEdit />,
-  // },
-  // {
-  //   path: "/profileUser/:id",
-  //   element: <ProfileUser />,
-  // },
-  // {
-  //   path: "/profileUser/edit/:id",
-  //   element: <ProfileUserEdit />,
-  // },
+  {
+    path: "/style",
+    element: <Style />,
+  },
+  {
+    path: "/get-started",
+    element: <GetStarted />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
