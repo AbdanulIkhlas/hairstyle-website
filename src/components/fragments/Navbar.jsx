@@ -13,7 +13,7 @@ const Navbar = ({ page }) => {
               <img
                 src="./images/logo.png"
                 alt="Logo"
-                className="h-12 inline-block"
+                className="w-14 inline-block"
               />
             </Link>
           </div>

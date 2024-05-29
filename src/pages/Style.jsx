@@ -12,7 +12,7 @@ const Style = () => {
         Pilih Gaya Rambutmu!
       </SubHeaderTitle>
       {/* SECTION CARD GAYA RAMBUT */}
-      <section className="grid grid-cols-5 gap-8 px-32 border border-black mb-10">
+      <section className="grid grid-cols-5 gap-8 px-32  mb-10">
         {RekomendasiRambut.map((item) => (
           <CardRekomendasi key={item.id} rekomendasi={item} />
         ))}
