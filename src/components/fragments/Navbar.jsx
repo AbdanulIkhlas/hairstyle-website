@@ -20,7 +20,7 @@ const Navbar = ({ page }) => {
           {/* Navbar Items */}
           <div className="flex space-x-8 items-center text-black text-lg font-bold">
             <Link
-              to="/home"
+              to="/"
               className={`hover:text-white transition duration-300 ${
                 page == "home" ? "text-white" : "text-black"
               }`}
