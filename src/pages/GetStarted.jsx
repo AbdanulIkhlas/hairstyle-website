@@ -10,8 +10,6 @@ import GayaKepribadian from "../data/GayaKepribadian";
 import ProsesRekomendasi from "../controllers/ProsesRekomendasi";
 import RadioButtonCard from "../components/fragments/RadioButtonCard";
 import ButtonCustom from "../components/elements/buttons/ButtonCustom";
-import RekomendasiRambut from "../data/RekomendasiRambut";
-import CardRekomendasi from "../components/fragments/CardRekomendasi";
 
 const GetStarted = () => {
   const [selectedBentukWajah, setSelectedBentukWajah] = useState(null);
@@ -39,14 +37,14 @@ const GetStarted = () => {
     setIsLoading(true); // Menampilkan animasi loading
     setTimeout(() => {
       setIsLoading(false); // Menghilangkan animasi loading setelah 3 detik
-    }, 3000);
+    }, 2000);
     setHasClickedButton(true); // Menandai tombol sudah diklik
   };
 
   return (
-    <div className="w-full flex flex-col bg-secondary font-inter">
+    <div className="w-full flex flex-col  font-inter">
       <Navbar page={"get-started"} />
-      <main className="min-h-[800px] w-full px-32 py-14 border border-black">
+      <main className="min-h-[800px] w-full px-32 py-14 bg-secondary">
         <HeaderTitle className={`mx-auto text-center mb-2`}>
           Tentukan Gaya Rambut Idealmu!
         </HeaderTitle>
@@ -88,7 +86,7 @@ const GetStarted = () => {
           </div>
         </section>
         {/* SECTION  GAYA KEPRIBADIAN*/}
-        <section>
+        <section className="mb-14">
           <SubHeaderTitle className={`mb-8 mt-14`}>
             Gaya Kepribadian
           </SubHeaderTitle>
@@ -105,35 +103,37 @@ const GetStarted = () => {
             ))}
           </div>
         </section>
-        <section className="w-full flex  mt-20 justify-center ">
-          <button
-            className="mx-auto "
-            onClick={handleLihatRekomendasiClick}
-            disabled={hasClickedButton}
-          >
-            <ButtonCustom
-              className={`w-full bg-primary text-black font-bold px-10 `}
-            >
-              Lihat Rekomendasi
-            </ButtonCustom>
-          </button>
-        </section>
         {/* hasil */}
-        <section className="mt-14 border border-black min-h-[500px]">
-          <SubHeaderTitle className={`mb - 8`}>Hasil</SubHeaderTitle>
-          {isLoading ? (
-            <div className="flex justify-center items-center h-full">
-              <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary "></div>
-            </div>
-          ) : (
-            hasClickedButton && (
-              <ProsesRekomendasi
-                kodeBentukWajah={selectedBentukWajah}
-                kodeJenisRambut={selectedJenisRambut}
-                kodeGayaKepribadian={selectedGayaKepribadian}
-              />
-            )
-          )}
+        <SubHeaderTitle className={`mb-10`}>Hasil</SubHeaderTitle>
+        <section className=" border border-black rounded-xl min-h-[500px] bg-white p-4">
+          <div className="w-full flex justify-center ">
+            <button
+              className="mx-auto w-full"
+              onClick={handleLihatRekomendasiClick}
+              disabled={hasClickedButton}
+            >
+              <ButtonCustom
+                className={`w-full bg-primary text-black font-bold px-10 `}
+              >
+                Lihat Rekomendasi
+              </ButtonCustom>
+            </button>
+          </div>
+          <div className="my-8">
+            {isLoading ? (
+              <div className="flex justify-center items-center h-full">
+                <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary "></div>
+              </div>
+            ) : (
+              hasClickedButton && (
+                <ProsesRekomendasi
+                  kodeBentukWajah={selectedBentukWajah}
+                  kodeJenisRambut={selectedJenisRambut}
+                  kodeGayaKepribadian={selectedGayaKepribadian}
+                />
+              )
+            )}
+          </div>
         </section>
       </main>
       <Footer />

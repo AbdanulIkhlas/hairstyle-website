@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const CardRekomendasi = ({ rekomendasi }) => {
-  const { nama, bentukWajah, jenisRambut, gayaPribadi, image } = rekomendasi;
+  const { nama, textBentukWajah, textJenisRambut, textGayaPribadi, image } = rekomendasi;
 
   return (
     <div className="card-container max-w-[320px] max-h-[500px]">
@@ -19,7 +19,7 @@ const CardRekomendasi = ({ rekomendasi }) => {
               alt="svg bentuk wajah"
               className="pt-[2px]"
             />
-            <p className="text-left">{bentukWajah.join(", ")}</p>
+            <p className="text-left">{textBentukWajah.join(", ")}</p>
           </div>
           <div className="flex gap-2 items-start mb-4 text-sm text-left min-h-[40px]">
             <img
@@ -27,7 +27,7 @@ const CardRekomendasi = ({ rekomendasi }) => {
               alt="svg jenis rambut"
               className="pt-[2px]"
             />
-            <p className="text-left">{jenisRambut.join(", ")}</p>
+            <p className="text-left">{textJenisRambut.join(", ")}</p>
           </div>
           <div className="flex gap-2 items-start mb-4 text-sm text-left min-h-[40px]">
             <img
@@ -35,7 +35,7 @@ const CardRekomendasi = ({ rekomendasi }) => {
               alt="svg kepribadian"
               className="pt-[2px]"
             />
-            <p className="text-left">{gayaPribadi.join(", ")}</p>
+            <p className="text-left">{textGayaPribadi.join(", ")}</p>
           </div>
         </div>
       </div>
