@@ -7,6 +7,11 @@ const ProsesRekomendasi = ({
   kodeJenisRambut,
   kodeGayaKepribadian,
 }) => {
+  // Error handling for empty props
+  if (!kodeBentukWajah || !kodeJenisRambut || !kodeGayaKepribadian) {
+    return <div className="text-center text-bold">Tolong pilih semua kategori</div>;
+  }
+
   const rekomendasiRambut = () => {
     const rekomendasiArray = [];
     for (const r of RekomendasiRambut) {
@@ -23,15 +28,20 @@ const ProsesRekomendasi = ({
       : ["Tidak ada rekomendasi yang cocok"];
   };
 
+  const rekomendasiList = rekomendasiRambut();
+
   return (
     <div className="grid grid-cols-3 justify-items-center gap-8 gap-y-12">
-      {rekomendasiRambut().map((rekomendasi) => (
-        <>
-          <div className="w-[300px] gap-y-12">
-            <CardRekomendasi key={rekomendasi.id} rekomendasi={rekomendasi} />
+      {Array.isArray(rekomendasiList) &&
+      rekomendasiList[0] === "Tidak ada rekomendasi yang cocok" ? (
+        <div>{rekomendasiList[0]}</div>
+      ) : (
+        rekomendasiList.map((rekomendasi) => (
+          <div key={rekomendasi.id} className="w-[300px] gap-y-12">
+            <CardRekomendasi rekomendasi={rekomendasi} />
           </div>
-        </>
-      ))}
+        ))
+      )}
     </div>
   );
 };
